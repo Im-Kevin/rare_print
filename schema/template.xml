@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./schema.xsd" width="800" height="800">
+    <font-type fontType="YaHei24" fontBaseWidth="32" fontBaseHeight="41"></font-type>
+    <printer-config fontType="YaHei24" fontSize="1">
+    </printer-config>
+    <column x="20">
+        <text align="center" fontSize="2" y="20">生产标识卡</text>
+        <row height="50" y="20">
+            <text width="90">品名:</text>
+            <text>轩尼丝轩尼丝条纹轩尼丝经典条纹A</text>
+        </row>
+        <row height="50">
+            <text width="90">型号:</text>
+            <text>AD-02910-1101</text>
+        </row>
+        <row height="50">
+            <text width="90">规格:</text>
+            <text>26 * 18</text>
+        </row>
+        <row height="50">
+            <text width="90">颜色:</text>
+            <text>咖啡色</text>
+        </row>
+        <row>
+            <column width="2">
+                <row height="50">
+                    <text width="90">数量:</text>
+                    <text>200块</text>
+                </row>
+                <row height="50">
+                    <text width="150">生产部门:</text>
+                    <text>工厂3号车间</text>
+                </row>
+                <row height="50">
+                    <text width="150">检 验 员:</text>
+                    <text>刘小红</text>
+                </row>
+                <row height="50">
+                    <text width="150">生产部门:</text>
+                    <text>2020年11月11日</text>
+                </row>
+            </column>
+            <qrcode binding="'TestNr01'" width="200" height="200">111</qrcode>
+        </row>
+    </column>
+</page>
