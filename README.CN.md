@@ -13,22 +13,22 @@
 # 打印例子
 ``` dart
     final demoXml = '<page width="880">...</page>'
-    var control = ControlBase.createForXml(demoXml);
+    var control = ControlBase.create(demoXml);
 
     var jsonData = json.decode(dataSource);
 
     control.setDataSource(DataSource(jsonData));
 
-    control.performLayout(BoxConstraints(maxWidth: 837));
+    control.performLayout(PrinterConstraints(maxWidth: 837));
     CPCLCanvas canvas = CPCLCanvas();
     canvas.pageSize = control.actualSize;
     canvas.reset();
 
-    control.paint(canvas, Offset.zero);
+    control.paint(canvas, PrinterOffset.zero);
 
     canvas.end();
 
-    io.send(canvas.buffer); // canvas.buffer里面就是具体指令
+    io.send(canvas.toCommand); // 输出具体指令
 ```
 
 # 预览例子
@@ -38,7 +38,7 @@
     void initState() {
         super.initState();
         final demoXml = '<page width="880">...</page>'
-        control = ControlBase.createForXml(demoXml);
+        control = ControlBase.create(demoXml);
     }
 
     @override
