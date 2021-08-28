@@ -16,22 +16,22 @@ Support preview, use pure instruction printing, avoid the problem of excessive i
 # Print Demo
 ``` dart
     final demoXml = '<page width="880">...</page>'
-    var control = ControlBase.createForXml(demoXml);
+    var control = ControlBase.create(demoXml);
 
     var jsonData = json.decode(dataSource);
 
     control.setDataSource(DataSource(jsonData));
 
-    control.performLayout(BoxConstraints(maxWidth: 837));
+    control.performLayout(PrinterConstraints(maxWidth: 837));
     CPCLCanvas canvas = CPCLCanvas();
     canvas.pageSize = control.actualSize;
     canvas.reset();
 
-    control.paint(canvas, Offset.zero);
+    control.paint(canvas, PrinterOffset.zero);
 
     canvas.end();
 
-    io.send(canvas.buffer); // canvas.buffer is instruction
+    io.send(canvas.toCommand()); // output instruction
 ```
 
 # Preview Demo
@@ -41,7 +41,7 @@ Support preview, use pure instruction printing, avoid the problem of excessive i
     void initState() {
         super.initState();
         final demoXml = '<page width="880">...</page>'
-        control = ControlBase.createForXml(demoXml);
+        control = ControlBase.create(demoXml);
     }
 
     @override
