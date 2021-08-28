@@ -3,7 +3,7 @@
 
 Some documents are not translated into English, welcome to submit RP
 
-# RarePrint
+# RarePrint [![pub package](https://img.shields.io/pub/v/rare_print.svg)](https://pub.dartlang.org/packages/rare_print)
 This is a rendering library for printing.<br/> 
 Support preview, use pure instruction printing, avoid the problem of excessive instruction caused by picture printing
  
