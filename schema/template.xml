@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./schema.xsd" width="800" height="800">
-    <font-type fontType="YaHei24" fontBaseWidth="32" fontBaseHeight="41"></font-type>
+    <font-type fontName="微软雅黑" fontType="YaHei24" fontBaseWidth="32" fontBaseHeight="41"></font-type>
     <printer-config fontType="YaHei24" fontSize="1">
     </printer-config>
     <column x="20">
