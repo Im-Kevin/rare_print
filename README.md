@@ -9,7 +9,7 @@ Support preview, use pure instruction printing, avoid the problem of excessive i
  
     Currently supported instruction set:
         CPCL
-        TSCL
+        TSPL
 
 [Document](document/templates/en/README.md)
 
